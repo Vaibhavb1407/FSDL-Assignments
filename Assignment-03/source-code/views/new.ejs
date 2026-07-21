@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Posts</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Thoughts</div>
+    </div>
+    </nav>
+
+  <div class="container">
+    <h2>Create New Post</h2>
+
+    <form class="form-card glass" method="post" action="/posts">
+      <input type="text" name="username" placeholder="Username" required>
+      <textarea name="content" rows="6" placeholder="Write your post..." required></textarea>
+      <button>Add Post</button>
+    </form>
+  </div>
+</body>
+
+</html>

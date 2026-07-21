@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Thoughts</div>
+    </div>
+    </nav>
+
+  <div class="container">
+    <h1>All Posts</h1>
+
+    <div class="posts">
+  <% for (post of posts) { %>
+    <div class="post glass">
+      <div class="user">@<%= post.username %></div>
+      <div class="content"><%= post.content %></div>
+
+      <div class="actions">
+        <button type="button" class="like-btn">❤️ Like</button>
+        <div class="hover-underline" ><a href="/posts/<%= post.id %>">View</a></div>
+        <div class="hover-underline"><a href="/posts/<%= post.id %>/edit">Edit</a></div>
+        
+
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+          <button class="delete">Delete</button>
+        </form>
+      </div>
+
+      <div class="comments">
+        <div class="comment">💬 Nice post!</div>
+        <div class="comment">💬 Very inspiring 🔥</div>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+
+    <a class="create-link" href="/posts/new">➕ Create New Post</a>
+  </div>
+
+  <script>
+  document.querySelectorAll(".like-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+
+
+</html>

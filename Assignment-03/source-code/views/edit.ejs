@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+     <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Thoughts</div>
+    </div>
+    </nav>
+
+  <div class="container">
+    <h2>Edit Post</h2>
+
+    <form class="form-card glass" method="post" action="/posts/<%= post.id %>?_method=PATCH">
+      <textarea name="content" rows="6"><%= post.content %></textarea>
+      <button>Save Changes</button>
+    </form>
+  </div>
+  
+</body>
+
+</html>

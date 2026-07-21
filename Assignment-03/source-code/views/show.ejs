@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Thoughts</div>
+    </div>
+    </nav>
+
+  <div class="post glass">
+  <div class="user">@<%= post.username %></div>
+  <div class="content"><%= post.content %></div>
+
+  <button class="like-btn">❤️ Like</button>
+
+  <div class="comments">
+    <div class="comment">💬 Loved this!</div>
+    <div class="comment">💬 Keep posting 🙌</div>
+  </div>
+</div>
+
+<br>
+<a href="/posts">← Back to Posts</a>
+ <script>
+  document.querySelectorAll(".like-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+
+</html>

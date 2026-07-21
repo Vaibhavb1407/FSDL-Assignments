@@ -1,0 +1,329 @@
+/* =====================
+   THEME VARIABLES
+===================== */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --radius: 14px;
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.nav-inner {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+
+/* =====================
+   LAYOUT
+===================== */
+.container {
+  width: min(900px, 90%);
+  margin: auto;
+  padding: 40px 0;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* =====================
+   POSTS
+===================== */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: var(--radius);
+  transition: all 0.25s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.user {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* =====================
+   ACTIONS
+===================== */
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.like-btn {
+  background: #eef2ff;
+  color: var(--accent);
+  border: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.like-btn:hover {
+  background: #e0e7ff;
+}
+
+/* =====================
+   FORMS
+===================== */
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 500px;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.delete {
+  background: var(--danger);
+}
+
+/* =====================
+   COMMENTS
+===================== */
+.comments {
+  margin-top: 14px;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+.comment {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hover-underline {
+  font-size: 1rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+} 
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 600px) {
+  .actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* =================================================
+   SAFE HOVER EFFECTS & LIKE BUTTON (FINAL)
+================================================= */
+
+/* Smooth card hover */
+/* .post {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+} */
+
+/* Actions container spacing */
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Link hover underline */
+/* .actions a {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.actions a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.actions a:hover::after {
+  width: 100%;
+} */
+
+/* =====================
+   SAFE LIKE BUTTON
+===================== */
+.like-btn {
+  background: #eef2ff;
+  color: var(--accent);
+  border: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.like-btn:hover {
+  background: #e0e7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.like-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* =====================
+   SAFE BUTTON HOVER
+===================== */
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Delete button emphasis */
+button.delete:hover {
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.35);
+}
+
+/* =====================
+   COMMENTS (UI)
+===================== */
+.comments {
+  margin-top: 14px;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+.comment {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
