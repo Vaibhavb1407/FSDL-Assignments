@@ -16,4 +16,4 @@ Node.js, Express, EJS, UUID, Method Override, HTML, and CSS.
 
 ## Output Proof
 
-Add screenshots of the application routes and CRUD operations to `output-screenshots` before final submission.
+The posts index page is captured in `output-screenshots/rest-crud-home.png`.

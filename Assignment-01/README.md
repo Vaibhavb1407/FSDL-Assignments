@@ -17,4 +17,4 @@ Node.js, Express, EJS, MongoDB, Mongoose, and CSS.
 
 ## Output Proof
 
-Add application screenshots to `output-screenshots` before final submission.
+The blog post creation page is captured in `output-screenshots/blog-create-post.png`.

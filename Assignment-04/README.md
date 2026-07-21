@@ -17,4 +17,4 @@ Node.js, Express, EJS, MongoDB, Mongoose, Multer, Method Override, HTML, and CSS
 
 ## Output Proof
 
-Add screenshots of the marketplace screens to `output-screenshots` before final submission.
+The create-product page is captured in `output-screenshots/used-sales-create-product.png`.

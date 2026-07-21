@@ -14,4 +14,4 @@ Open `source-code/index.html` in a modern web browser.
 
 ## Output Proof
 
-Add screenshots of the rendered interface to `output-screenshots` before final submission.
+The rendered e-commerce homepage is captured in `output-screenshots/ecommerce-interface.png`.
