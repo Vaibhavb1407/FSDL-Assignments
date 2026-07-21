@@ -6,11 +6,10 @@ This repository contains four Full Stack Development Lab assignments and a perso
 
 | Field | Details |
 |---|---|
-| Name | Vaibhav |
-| Roll No. | Add before submission |
-| Class | Add before submission |
-| Division | Add before submission |
-| Subject | Full Stack Development Lab |
+| Name | Vaibhav Bargal |
+| PRN | 123B1B090 |
+| Division | B |
+| Subject | DevOps |
 
 ## Repository Structure
 
@@ -24,7 +23,7 @@ Every assignment includes `source-code`, `output-screenshots`, and its own READM
 
 ## Website and Repository Links
 
-- GitHub repository: Add after creating the public repository.
+- GitHub repository: https://github.com/Vaibhavb1407/FSDL-Assignments
 - Live portfolio: Add after enabling GitHub Pages from `main` and `/docs`.
 
 ## Technologies Used
