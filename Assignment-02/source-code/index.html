@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Premium Fashion Store</title>
+    <meta name="description"
+        content="Discover the latest trends in fashion at Lumina. Premium clothing for men and women.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script> <!-- Using Feather Icons for scalable SVGs -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Lumina.</a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#shop" class="nav-link">Shop</a></li>
+                    <li><a href="#collections" class="nav-link">Collections</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i data-feather="search"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="close-menu"><i data-feather="x"></i></button>
+        <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#shop" class="mobile-nav-link">Shop</a></li>
+            <li><a href="#collections" class="mobile-nav-link">Collections</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">New Collection 2026</span>
+                <h1 class="hero-title">Elevate Your Style.</h1>
+                <p class="hero-subtitle">Discover premium essentials crafted for the modern individual.</p>
+                <a href="#shop" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="hero-image-container">
+                <!-- Using a placeholder for now, will be styled with background image -->
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories section" id="collections">
+            <div class="container">
+                <h2 class="section-title">Collections</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="women">
+                        <div class="category-content">
+                            <h3>Women</h3>
+                            <a href="#shop" class="link-arrow">Shop Now <i data-feather="arrow-right"></i></a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                            alt="Women's Fashion" class="category-img">
+                    </div>
+                    <div class="category-card" data-category="men">
+                        <div class="category-content">
+                            <h3>Men</h3>
+                            <a href="#shop" class="link-arrow">Shop Now <i data-feather="arrow-right"></i></a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1470&auto=format&fit=crop"
+                            alt="Men's Fashion" class="category-img">
+                    </div>
+                    <div class="category-card" data-category="accessories">
+                        <div class="category-content">
+                            <h3>Accessories</h3>
+                            <a href="#shop" class="link-arrow">Shop Now <i data-feather="arrow-right"></i></a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?q=80&w=1510&auto=format&fit=crop"
+                            alt="Accessories" class="category-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="products section" id="shop">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Trending Now</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="clothing">Clothing</button>
+                        <button class="filter-btn" data-filter="footwear">Footwear</button>
+                        <button class="filter-btn" data-filter="accessories">Accessories</button>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section">
+            <div class="container newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Join the Inner Circle</h2>
+                    <p>Subscribe for exclusive drops, early access, and style tips.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault()">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Bag (<span id="cart-count-header">0</span>)</h2>
+            <button class="close-btn" id="close-cart"><i data-feather="x"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be here -->
+            <div class="empty-cart-msg">Your bag is empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Lumina.</a>
+                <p>Premium fashion for the modern era. Designed for those who appreciate quality and style.</p>
+                <div class="social-links">
+                    <a href="#"><i data-feather="instagram"></i></a>
+                    <a href="#"><i data-feather="twitter"></i></a>
+                    <a href="#"><i data-feather="facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lumina Fashion Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
