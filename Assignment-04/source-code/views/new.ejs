@@ -1,0 +1,85 @@
+<%- include('partials/header') %>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8 col-lg-6">
+            <div class="premium-form">
+                <h3 class="fw-bold text-center mb-1">List an Item</h3>
+                <p class="text-center text-muted mb-4 pb-2 border-bottom">Fill out the details below to start selling.
+                </p>
+                <form action="/products" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-semibold text-dark">Product Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required
+                            placeholder="e.g. Used iPhone 12 Pro Max">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="price" class="form-label fw-semibold text-dark">Price ($)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">$</span>
+                                <input type="number" step="0.01" min="0" class="form-control border-start-0 ps-0"
+                                    id="price" name="price" required placeholder="0.00">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="category" class="form-label fw-semibold text-dark">Category</label>
+                            <select class="form-select" id="category" name="category" required>
+                                <option value="" disabled selected>Select category...</option>
+                                <option value="Cars">Cars</option>
+                                <option value="Bikes">Bikes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="make" class="form-label fw-semibold text-dark">Make</label>
+                            <input type="text" class="form-control" id="make" name="make" required
+                                placeholder="e.g. Toyota, Honda">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="model" class="form-label fw-semibold text-dark">Model</label>
+                            <input type="text" class="form-control" id="model" name="model" required
+                                placeholder="e.g. Camry, Civic">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="year" class="form-label fw-semibold text-dark">Year</label>
+                            <input type="number" class="form-control" id="year" name="year" required min="1886"
+                                placeholder="e.g. 2020">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="mileage" class="form-label fw-semibold text-dark">Mileage (km)</label>
+                            <input type="number" class="form-control" id="mileage" name="mileage" required min="0"
+                                placeholder="e.g. 15000">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="condition" class="form-label fw-semibold text-dark">Condition</label>
+                            <select class="form-select" id="condition" name="condition" required>
+                                <option value="" disabled selected>Select condition...</option>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Needs Work">Needs Work</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label fw-semibold text-dark">Upload Image</label>
+                        <input class="form-control" type="file" id="image" name="image" accept="image/*">
+                    </div>
+                    <div class="mb-4">
+                        <label for="description" class="form-label fw-semibold text-dark">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required
+                            placeholder="Describe the item's condition, features, and why you are selling it..."></textarea>
+                    </div>
+                    <div class="d-grid gap-2 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg fw-bold shadow-sm">Post Listing</button>
+                        <a href="/products" class="btn btn-light fw-medium mt-1">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
