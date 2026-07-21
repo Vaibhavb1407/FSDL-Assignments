@@ -24,12 +24,8 @@ Every assignment includes `source-code`, `output-screenshots`, and its own READM
 ## Website and Repository Links
 
 - GitHub repository: https://github.com/Vaibhavb1407/FSDL-Assignments
-- Live portfolio: Add after enabling GitHub Pages from `main` and `/docs`.
+- Live portfolio: https://vaibhavb1407.github.io/FSDL-Assignments/
 
 ## Technologies Used
 
 Git, GitHub, HTML, CSS, JavaScript, Node.js, Express, EJS, MongoDB, Mongoose, and GitHub Pages.
-
-## Deployment
-
-In GitHub, open **Settings > Pages**, choose **Deploy from a branch**, and select the `main` branch with the `/docs` folder. GitHub will provide the live URL.
