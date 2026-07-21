@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vaibhav's FSDL portfolio and practical assignments." />
+    <title>Vaibhav | FSDL Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container" aria-label="Main navigation">
+        <a href="#hero" class="logo">Vaibhav<span class="dot">.</span></a>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Open navigation" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#assignments" class="nav-link">Assignments</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <p class="greeting">Hello, my name is</p>
+          <h1 class="name">Vaibhav.</h1>
+          <h2 class="subheading">I build things for the web.</h2>
+          <p class="description">I am a Full Stack Development Lab student building practical web applications with modern front-end and back-end tools.</p>
+          <a href="#assignments" class="cta-button">View my assignments</a>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <h2 class="numbered-heading">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>I enjoy learning how thoughtful design and reliable code come together to make useful web experiences.</p>
+            <p>This portfolio brings together my Full Stack Development Lab work, from responsive interfaces to server-side CRUD applications.</p>
+            <p>Technologies I have used:</p>
+            <ul class="skills-list"><li>HTML & CSS</li><li>JavaScript</li><li>Node.js & Express</li><li>EJS</li><li>MongoDB & Mongoose</li><li>Git & GitHub</li></ul>
+          </div>
+          <div class="about-img"><div class="img-wrapper"><img src="assets/profile.png" alt="Portrait of Vaibhav" /></div></div>
+        </div>
+      </section>
+
+      <section id="assignments" class="projects-section">
+        <h2 class="numbered-heading">FSDL Assignments</h2>
+        <div class="projects-grid">
+          <article class="project-card"><p class="project-number">01</p><h3 class="project-title">Blog Application</h3><p class="project-description">A Node.js and Express application that supports complete blog post CRUD operations.</p><a class="project-link" href="../Assignment-01/README.md">View assignment</a><p class="project-tech-list">Node.js · Express · EJS · MongoDB</p></article>
+          <article class="project-card"><p class="project-number">02</p><h3 class="project-title">E-commerce Interface</h3><p class="project-description">A responsive shopping interface built with semantic HTML, CSS, and JavaScript.</p><a class="project-link" href="../Assignment-02/README.md">View assignment</a><p class="project-tech-list">HTML · CSS · JavaScript</p></article>
+          <article class="project-card"><p class="project-number">03</p><h3 class="project-title">RESTful CRUD App</h3><p class="project-description">An Express and EJS application demonstrating RESTful routes and complete CRUD workflow.</p><a class="project-link" href="../Assignment-03/README.md">View assignment</a><p class="project-tech-list">Node.js · Express · EJS</p></article>
+          <article class="project-card"><p class="project-number">04</p><h3 class="project-title">Used Sales Marketplace</h3><p class="project-description">A product marketplace with image uploads and database-backed product management.</p><a class="project-link" href="../Assignment-04/README.md">View assignment</a><p class="project-tech-list">Express · MongoDB · Mongoose · Multer</p></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2 class="numbered-heading">Get In Touch</h2>
+        <p class="contact-text">Have a question about my FSDL work? You can reach me by email.</p>
+        <a href="mailto:vaibhav@example.com" class="cta-button">Say hello</a>
+      </section>
+    </main>
+    <footer><p>Designed and built by Vaibhav · FSDL Portfolio</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
